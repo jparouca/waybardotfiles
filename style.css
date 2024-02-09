@@ -1,0 +1,161 @@
+* {
+  border: none;
+  border-radius: 0px;
+  font-family: "SF Mono Nerd Font","JetBrainsMono Nerd Font";
+  font-weight: bold;
+  font-size: 8px;
+  margin: 0px;
+  padding: 0px;
+}
+
+window#waybar {
+    background: rgba(17, 17, 27, .10);
+}
+
+tooltip {
+  color: #f9f5d7;
+  border-radius: 10px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #11111b;
+}
+
+#workspaces button {
+  box-shadow: none;
+  text-shadow: none;
+  padding: 0px;
+  margin: 0px;
+  border-radius: 7px;
+  padding-left: 2px;
+  padding-right: 2px;
+  color: #cdd6f4;
+  animation: gradient_f 20s ease-in infinite;
+  transition: all 0.5s cubic-bezier(.55,-0.68,.48,1.682);
+  margin-right: 12px;
+}
+
+#workspaces button.active {
+  background: #a6adc8;
+  color: #313244;
+  margin-left: 2px;
+  margin: 0px;
+  padding-left: 10px;
+  padding-right: 10px;
+  animation: gradient_f 20s ease-in infinite;
+  transition: all 0.3s cubic-bezier(.55,-0.68,.48,1.682);
+}
+
+#workspaces button:hover {
+  background: #f5c2e7;
+  color: #313244;
+  margin: 0px;
+  padding-left: 2px;
+  padding-right: 2px;
+  animation: gradient_f 20s ease-in infinite;
+  transition: all 0.3s cubic-bezier(.55,-0.68,.48,1.682);
+}
+
+#custom-power,
+#clock,
+#workspaces,
+#window,
+#custom-updates,
+#bluetooth,
+#pulseaudio,
+#custom-wallchange,
+#custom-mode,
+#tray {
+  color: #f9f5d7;
+  opacity: 1;
+  padding: 0px;
+}
+
+#custom-cmodule {
+  color: #f9f5d7;
+  opacity: 0.8;
+  padding: 0px;
+}
+
+#clock {
+  padding-left: 12px;
+  font-size: 12px;
+}
+
+
+/* workspace window block */
+
+#workspaces {
+  border-radius: 10px 0px 0px 10px;
+  padding-left: 12px;
+  margin-left: 240px;
+  margin-right: 12px;
+}
+
+#window {
+  border-radius: 0px 10px 10px 0px;
+  padding-right: 12px;
+}
+
+
+/* control center block */
+
+#custom-updates {
+  border-radius: 10px 0px 0px 10px;
+  margin-left: 6px;
+  padding-left: 12px;
+  padding-right: 4px;
+}
+
+
+#bluetooth {
+    padding-left: 4px;
+    padding-right: 4px;
+    font-size: 12px;
+}
+
+#pulseaudio {
+    padding-left: 4px;
+    padding-right: 4px;
+    font-size: 12px;
+}
+
+#pulseaudio.microphone {
+    padding-left: 4px;
+    padding-right: 4px;
+}
+
+#custom-wallchange {
+    padding-left: 4px;
+    padding-right: 12px;
+}
+
+
+/* system tray block */
+#custom-mode {
+    border-radius: 10px 0px 0px 10px;
+    margin-left: 6px;
+    padding-left: 12px;
+    padding-right: 4px;
+}
+
+#tray {
+    padding-left: 4px;
+    padding-right: 4px;
+    margin-right: 240px;
+}
+
+#custom-power {
+    border-radius: 0px 10px 10px 0px;
+    padding-left: 4px;
+    padding-right: 12px;
+    font-size: 12px;
+}
+
+#network {
+
+}
+
+
+#custom-cmodule{
+  font-size: 14px;
+}

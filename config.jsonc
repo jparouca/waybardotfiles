@@ -1,0 +1,136 @@
+{
+  "layer": "top",
+  "position": "bottom",
+  "autohide": true,
+  "autohide-delay": 1500,
+  "autohide-starthidden": true,
+  "height": 20,
+  "exclusive": true,
+  "passthrough": false,
+  "gtk-layer-shell": true,
+  "spacing": 4,
+  "modules-left": [
+    "hyprland/workspaces"
+  ],
+  "modules-center": [
+    "custom/cmodule",
+    "clock"
+  ],
+  "modules-right": [
+    "pulseaudio",
+    "pulseaudio#microphone",
+    "tray"
+  ],
+  "wlr/workspaces": {
+    "disable-scroll": true,
+    "all-outputs": true,
+    "on-click": "activate",
+    "persistent_workspaces": {
+      "1": [],
+      "2": [],
+      "3": [],
+      "4": [],
+      "5": [],
+      "6": [],
+      "7": [],
+      "8": [],
+      "9": [],
+      "10": []
+    }
+  },
+  "clock": {
+    "format": "{: %I:%M %p}",
+    "format-alt": "{:󰥔 %H:%M  %b %Y}",
+    "tooltip-format": "<tt><big>{calendar}</big></tt>"
+  },
+  "custom/tasks": {
+    "format": "{}",
+    "interval": "once"
+  },
+  "bluetooth": {
+    "format": "",
+    "format-disabled": "", // an empty format will hide the module
+    "format-connected": " {num_connections}",
+    "tooltip-format": " {device_alias}",
+    "tooltip-format-connected": "{device_enumerate}",
+    "tooltip-format-enumerate-connected": " {device_alias}"
+  },
+  "pulseaudio": {
+    "format": "{icon}",
+    "format-muted": "婢",
+    "on-click": "pavucontrol -t 3",
+    "on-click-middle": "~/.config/hypr/volumecontrol.sh m",
+    "on-scroll-up": "~/.config/hypr/volumecontrol.sh i",
+    "on-scroll-down": "~/.config/hypr/volumecontrol.sh d",
+    "tooltip-format": "{icon} {desc} {volume}%",
+    "scroll-step": 5,
+    "format-icons": {
+      "headphone": "",
+      "hands-free": "",
+      "headset": "",
+      "phone": "",
+      "portable": "",
+      "default": [
+        "",
+        "",
+        ""
+      ]
+    }
+  },
+  "pulseaudio#microphone": {
+    "format": "{format_source}",
+    "format-source": "",
+    "format-source-muted": "",
+    "on-click": "pavucontrol -t 4",
+    "on-click-middle": "pamixer --default-source -t",
+    "on-scroll-up": "pamixer --default-source -i 5",
+    "on-scroll-down": "pamixer --default-source -d 5",
+    "scroll-step": 5
+  },
+  "custom/wallchange": {
+    "format": "{}",
+    "exec": "~/.config/swww/swwwallpaper.sh -t",
+    "on-click": "~/.config/swww/swwwallpaper.sh -n",
+    "interval": 86400, // once every day
+    "tooltip": true
+  },
+  "tray": {
+    "icon-size": 15,
+    "spacing": 5
+  },
+  "custom/power": {
+    "format": "",
+    "on-click": "wlogout -b 2 -c 0 -r 0 -L 930 -R 930 -T 300 -B 300 --protocol layer-shell",
+    "tooltip": false,
+    "icon-size": 15,
+    "spacing": 5
+  },
+  "custom/cmodule": {
+    "format": "{}",
+    "tooltip": true,
+    "interval": "once",
+    "return-type": "json",
+    "exec": "~/.config/waybar/scripts/obsidian.py",
+    "on-click": "",
+    "on-click-right": ""
+  },
+  "custom/cliphist": {
+    "format": "{}",
+    "exec": "~/.config/hypr/scripts/cliphist.sh t",
+    "on-click": "sleep 0.1 && ~/.config/hypr/scripts/cliphist.sh c",
+    //"on-click-right": "sleep 0.1 && ~/.config/hypr/scripts/cliphist.sh d",
+    "on-click-middle": "sleep 0.1 && ~/.config/hypr/scripts/cliphist.sh w",
+    "interval": 86400, // once every day
+    "tooltip": true
+  },
+  "network": {
+    "format": "{ifname}",
+    "format-wifi": "{essid} ({signalStrength}%) ",
+    "format-ethernet": "{ipaddr}/{cidr} 󰊗",
+    "tooltip-format": "{ifname} via {gwaddr} 󰊗",
+    "tooltip-format-wifi": "{essid} ({signalStrength}%) ",
+    "tooltip-format-ethernet": "{ifname} ",
+    "tooltip-format-disconnected": "Disconnected",
+    "max-length": 50
+  }
+}
